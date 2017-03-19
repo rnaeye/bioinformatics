@@ -7,6 +7,6 @@
 for i in $1/*.1.fastq.gz 
 do
     file_name = $(basename -s 1.fastq.gz $i)
-    echo "${file_name}" $(gunzip -c $i | echo $(wc -l)/4)
+    echo "${file_name}" $(gunzip -c $i | echo $(wc -l)/4 | bc)
 done
 
