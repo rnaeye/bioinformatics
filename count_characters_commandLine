@@ -1,0 +1,2 @@
+#count without line break
+awk 1 ORS=""|wc
