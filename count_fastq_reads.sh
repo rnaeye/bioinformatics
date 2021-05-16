@@ -10,3 +10,10 @@ do
     echo "${file_name}" $(gunzip -c $i | echo $(wc -l)/4 | bc)
 done
 
+# If you are in the runFolder where fastq.gz, then doo not use command line argument $1
+# Youor program becomes like this
+for i in *.1.fastq.gz 
+do
+    file_name = $(basename -s 1.fastq.gz $i)
+    echo "${file_name}" $(gunzip -c $i | echo $(wc -l)/4 | bc)
+done
